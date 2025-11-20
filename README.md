@@ -1,4 +1,4 @@
-# [你的扩展名称] / [Your Extension Name] 🧩
+# [链接小窗预览] / [link-preview-extension] 🧩
 
 ![Version](https://img.shields.io/badge/version-1.0.0-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -65,7 +65,7 @@ Since this extension is not yet on the Chrome Web Store, you need to load it man
 3.  [Step 2: See the result...]
 
 ### 🤝 Acknowledgements
-Developed by **[Your Name]**.
+Developed by **kailiteking**.
 * 🤖 Special thanks to **Gemini** for code assistance and technical support.
 
 ---
