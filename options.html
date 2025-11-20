@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Link Previewer Settings</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 600px; }
+    h2 { border-bottom: 1px solid #ccc; padding-bottom: 10px; }
+    .section { margin-bottom: 20px; padding: 15px; background: #f9f9f9; border-radius: 5px; }
+    label { display: block; margin-bottom: 8px; font-weight: bold; }
+    .sub-label { font-weight: normal; font-size: 0.9em; margin-left: 20px; }
+    input[type="number"] { width: 60px; }
+    select { padding: 5px; }
+    button { padding: 8px 16px; background: #0078d4; color: white; border: none; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #005a9e; }
+    #status { margin-left: 10px; color: green; display: none; }
+  </style>
+</head>
+<body>
+  <h2>Link Previewer 设置</h2>
+
+  <div class="section">
+    <label>触发方式 (Trigger Mode)</label>
+    <select id="triggerMode">
+      <option value="click">按键 + 点击 (Key + Click)</option>
+      <option value="hover">鼠标悬浮 (Hover)</option>
+    </select>
+
+    <div id="keySetting" style="margin-top: 10px;">
+      <label class="sub-label">触发按键:
+        <select id="triggerKey">
+          <option value="Control">Ctrl</option>
+          <option value="Alt">Alt</option>
+          <option value="Shift">Shift</option>
+          <option value="Meta">Command/Win</option>
+        </select>
+      </label>
+    </div>
+
+    <div id="hoverSetting" style="margin-top: 10px; display: none;">
+      <label class="sub-label">悬浮时间 (毫秒):
+        <input type="number" id="hoverDelay" value="600" min="100">
+      </label>
+    </div>
+  </div>
+
+  <div class="section">
+    <label>窗口大小 (Window Size)</label>
+    <div style="display: flex; gap: 20px;">
+      <label class="sub-label">宽度 (px): <input type="number" id="winWidth" value="800"></label>
+      <label class="sub-label">高度 (px): <input type="number" id="winHeight" value="600"></label>
+    </div>
+  </div>
+
+  <div class="section">
+    <label>关闭策略 (Closing Behavior)</label>
+    <select id="closeMode">
+      <option value="leave">鼠标移出窗口后自动关闭</option>
+      <option value="clickOutside">点击窗口外部时关闭</option>
+    </select>
+  </div>
+
+  <button id="save">保存设置</button>
+  <span id="status">已保存！</span>
+
+  <script src="options.js"></script>
+</body>
+</html>

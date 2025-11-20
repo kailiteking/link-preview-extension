@@ -1,0 +1,44 @@
+/* style.css */
+#lp-preview-container {
+  position: fixed;
+  /* width 和 height 已移除，改为由 content.js 动态控制 */
+  background: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  z-index: 2147483647;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  pointer-events: auto;
+}
+
+#lp-loading-bar {
+  height: 32px;
+  background: #f1f1f1;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 13px;
+  border-bottom: 1px solid #ddd;
+  font-family: sans-serif;
+  user-select: none;
+}
+
+#lp-close-btn {
+  cursor: pointer;
+  font-weight: bold;
+  color: #888;
+  padding: 5px;
+}
+#lp-close-btn:hover {
+  color: #333;
+}
+
+#lp-preview-frame {
+  width: 100%;
+  height: calc(100% - 32px);
+  border: none;
+  background: #fff;
+}
